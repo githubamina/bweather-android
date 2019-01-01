@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<ScrollView
+
+    android:id="@+id/mainScroll"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+        android:visibility="gone"
+
+        android:indeterminate="true"
+
+
+        android:id="@+id/progress_bar"
+        android:layout_marginTop="200dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:visibility="gone"
+
+        android:id="@+id/error_text"
+        android:shadowColor="#7F000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="20"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/kiki"
+        android:textSize="50sp"
+        android:textColor="@color/defaultBG"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+
+        android:paddingTop="100dp"
+        android:text="An error occurred while retrieving weather data. Please check your connection settings and restart the app or try again later."
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+<LinearLayout
+    android:visibility="gone"
+    android:background="@color/defaultBG"
+
+    android:id="@+id/mainLayout"
+    android:orientation="vertical"
+    android:gravity="center"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activities.MainActivity">
+
+    <include layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+
+    <RelativeLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/mainImage"
+
+        android:alpha="0.8"
+        android:scaleType="fitCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:id="@+id/secondImage"
+
+            android:alpha="0.8"
+            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+        <TextView
+            android:shadowColor="#7F000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="50"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:fontFamily="@font/kiki"
+        android:textSize="50sp"
+        android:textColor="#FFF"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currentLocation"
+        android:text="City"/>
+    <TextView
+        android:shadowColor="#7F000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="50"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/ellen"
+        android:textSize="100sp"
+        android:textColor="#FFF"
+        android:textAlignment="center"
+        android:layout_below="@+id/currentLocation"
+        android:id="@+id/currentForecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="20 C"/>
+    <TextView
+        android:shadowColor="#7F000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="50"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/ellen"
+        android:textSize="60sp"
+        android:textColor="#FFF"
+        android:textAlignment="center"
+        android:layout_below="@+id/currentForecast"
+        android:id="@+id/currentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Partly cloudy"/>
+
+    <TextView
+        android:shadowColor="#7F000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="50"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/ellen"
+        android:textSize="60sp"
+        android:textColor="#FFF"
+        android:textAlignment="center"
+        android:layout_below="@+id/currentDescription"
+        android:id="@+id/detailedSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Slight chance of rain"/>
+
+        <ImageView
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/detailedSummary"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/pipImage"
+            android:scaleType="fitCenter"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/precipitationSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAlignment="center"
+            android:text="Precipitation:"
+            android:fontFamily="@font/kiki"
+            android:textSize="35sp"
+            android:textColor="#FFF"
+            android:id="@+id/precipChance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/kaus"
+            android:textSize="50sp"
+            android:textColor="#FFF"
+            android:id="@+id/precipSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="20dp"
+
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:id="@+id/uvSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textAlignment="center"
+            android:fontFamily="@font/kiki"
+            android:textSize="35sp"
+            android:textColor="#FFF"
+            android:id="@+id/uvnumber"
+            android:text="Sun protection:"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/kaus"
+            android:textSize="50sp"
+            android:textColor="#FFF"
+            android:id="@+id/uvsuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:id="@+id/skinSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:fontFamily="@font/kiki"
+            android:textSize="35sp"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:text="Skin care:"
+            android:id="@+id/humidityweather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:fontFamily="@font/kaus"
+            android:textSize="50sp"
+            android:text="Currently not available"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:id="@+id/skinSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        android:fontFamily="@font/kiki"
+        android:id="@+id/hourlyDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DAY"
+        android:textAlignment="center"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/hourlyRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        android:fontFamily="@font/kiki"
+        android:padding="20dp"
+        android:textAlignment="center"
+        android:text="Weekly Forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.RecyclerView
+
+        android:layout_margin="10dp"
+        android:id="@+id/weeklyRecycler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_toLeftOf="@id/line7"
+        android:textSize="65sp"
+        android:fontFamily="@font/ellen"
+        android:textColor="#FFF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sunrise"
+        android:padding="20dp"/>
+        <TextView
+            android:id="@+id/line7"
+            android:fontFamily="@font/kaus"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/line7"
+            android:textSize="50sp"
+            android:fontFamily="@font/kaus"
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:id="@+id/sunriseTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7pm"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sunsetText"
+            android:layout_toLeftOf="@id/line6"
+            android:textSize="65sp"
+            android:fontFamily="@font/ellen"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunset"
+            android:padding="20dp"/>
+        <TextView
+            android:id="@+id/line6"
+            android:fontFamily="@font/kaus"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/line6"
+            android:textSize="50sp"
+            android:fontFamily="@font/kaus"
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:id="@+id/sunsetTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7pm"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:paddingTop="20dp"
+            android:layout_toLeftOf="@id/line5"
+            android:textSize="65sp"
+            android:fontFamily="@font/ellen"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Real feel"
+            />
+        <TextView
+            android:id="@+id/line5"
+            android:fontFamily="@font/kaus"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/line5"
+            android:textSize="50sp"
+            android:fontFamily="@font/kaus"
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:id="@+id/realFeel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_toLeftOf="@id/line4"
+            android:textSize="65sp"
+            android:fontFamily="@font/ellen"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/line4"
+            android:fontFamily="@font/kaus"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/line4"
+            android:textSize="50sp"
+            android:fontFamily="@font/kaus"
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8%"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+           android:layout_toLeftOf="@id/line3"
+
+            android:textSize="65sp"
+            android:fontFamily="@font/ellen"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visibility"
+            android:padding="20dp"/>
+        <TextView
+            android:id="@+id/line3"
+            android:fontFamily="@font/kaus"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/line3"
+
+            android:textSize="50sp"
+            android:fontFamily="@font/kaus"
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:id="@+id/visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10km"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_toLeftOf="@id/line2"
+
+            android:textSize="65sp"
+            android:fontFamily="@font/ellen"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pressure"
+            android:padding="20dp"/>
+        <TextView
+            android:id="@+id/line2"
+            android:fontFamily="@font/kaus"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/line2"
+
+            android:textSize="50sp"
+            android:fontFamily="@font/kaus"
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1015hPa"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_toLeftOf="@id/line"
+            android:textSize="65sp"
+            android:fontFamily="@font/ellen"
+            android:textColor="#FFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind"
+            android:padding="20dp"/>
+        <TextView
+            android:id="@+id/line"
+            android:fontFamily="@font/kaus"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFF"
+            android:textSize="40sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_toRightOf="@id/line"
+            android:textSize="50sp"
+            android:fontFamily="@font/kaus"
+            android:textColor="#FFF"
+            android:layout_alignParentRight="true"
+            android:id="@+id/wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10E200"
+            android:padding="20dp"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

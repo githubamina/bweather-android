@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Blinx Weather</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_saved_location_selection">SavedLocationSelectionActivity</string>
+    <string name="title_activity_temperature">TemperatureActivity</string>
+</resources>

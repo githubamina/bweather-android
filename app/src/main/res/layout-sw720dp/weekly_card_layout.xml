@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    card_view:cardBackgroundColor="#e1648a"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:layout_margin="10dp"
+    card_view:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+
+
+            <TextView
+                android:fontFamily="@font/ellen"
+                android:paddingLeft="20dp"
+                android:textColor="#f6ffde"
+                android:textSize="60sp"
+                android:paddingTop="30dp"
+                android:paddingBottom="20dp"
+                android:id="@+id/day"
+                android:text="Wednesday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/weatherIconWeekly"
+           android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            />
+
+        <TextView
+            android:fontFamily="@font/hashtag"
+            android:textColor="#f6ffde"
+            android:textSize="60sp"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp"
+            android:id="@+id/tempMax"
+            android:text="22"
+            android:layout_toLeftOf="@id/tempLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:fontFamily="@font/hashtag"
+            android:textColor="#f6ffde"
+            android:textSize="60sp"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/tempLow"
+            android:text="18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
